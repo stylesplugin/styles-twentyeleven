@@ -99,10 +99,6 @@
 		{ "selector": ".entry-title, .entry-title a", "type": "text", "label": "Title" },
 		{ "selector": ".entry-title, .entry-title a", "type": "color", "label": "Title color" },
 		{ "selector": ".entry-title a:hover", "type": "color", "label": "Title link hover color" },
-		/* Archive Title */
-		{ "selector": ".page-title, .page-title a", "type": "text", "label": "Archive title" },
-		{ "selector": ".page-title, .page-title a", "type": "color", "label": "Archive title color" },
-		{ "selector": ".page-title a:hover", "type": "color", "label": "Archive link hover color" },
 		/* Headers */
 		{ "selector": ".entry-content h1", "type": "text", "label": "Heading 1" },
 		{ "selector": ".entry-content h1", "type": "color", "label": "Heading 1 color" },
@@ -116,67 +112,83 @@
 		{ "selector": ".entry-content h5", "type": "color", "label": "Heading 5 color" },
 		{ "selector": ".entry-content h6", "type": "text", "label": "Heading 6" },
 		{ "selector": ".entry-content h6", "type": "color", "label": "Heading 6 color" },
+		/* Post Format Title */
+		{ "selector": ".entry-format", "type": "text", "label": "Post format title" },
+		{ "selector": ".entry-format", "type": "color", "label": "Post format title color" },
+		/* Archive Title */
+		{ "selector": ".page-title, .page-title a", "type": "text", "label": "Archive title" },
+		{ "selector": ".page-title, .page-title a", "type": "color", "label": "Archive title color" },
+		{ "selector": ".page-title a:hover", "type": "color", "label": "Archive link hover color" },
 		{}
 	],
 	"Entry Content": [
-		
-		/* Post Format */
-		{ "selector": ".entry-format", "type": "text", "label": "Post Format Text" },
-		{ "selector": ".entry-format", "type": "color", "label": "Post Format color" },
 		/* Paragraph */
 		{ "selector": ".entry-content p, .entry-summary p, #respond p", "type": "text", "label": "Paragraph" },
 		{ "selector": ".entry-content p, .entry-summary p, #respond p", "type": "color", "label": "Paragraph color" },
-		/* Small Text */
-		{ "selector": ".entry-content small", "type": "text", "label": "Small Text" },
-		{ "selector": ".entry-content small", "type": "color", "label": "Small Text color" },
-		/* List Items */
-		{ "selector": ".entry-content li, .entry-content li p", "type": "text", "label": "List Items" },
-		{ "selector": ".entry-content li, .entry-content li p", "type": "color", "label": "List Items color" },
 		/* Links set for content and comments. Comment selection should override */
 		{ "selector": ".entry-content a, #commentform a", "type": "color", "label": "Link color" },
 		{ "selector": ".entry-content a:hover, #commentform a:hover", "type": "color", "label": "Link hover color" },
+		/* Lists */
+		{ "selector": ".entry-content li, .entry-content li p", "type": "text", "label": "List Items" },
+		{ "selector": ".entry-content li, .entry-content li p", "type": "color", "label": "List Items color" },
+		/* Small */
+		{ "selector": ".entry-content small", "type": "text", "label": "Small" },
+		{ "selector": ".entry-content small", "type": "color", "label": "Small color" },
+		/* Preformatted */
 		{ "selector": ".entry-content pre", "type": "text", "label": "Preformatted" },
 		{ "selector": ".entry-content pre", "type": "color", "label": "Preformatted color" },
 		{ "selector": ".entry-content pre", "type": "background-color", "label": "Preformatted background color" },
+		/* Blockquote */
 		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "text", "label": "Blockquote" },
 		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "color", "label": "Blockquote color" },
+		/* Address */
 		{ "selector": ".entry-content address", "type": "text", "label": "Address" },
 		{ "selector": ".entry-content address", "type": "color", "label": "Address color" },
-		{ "selector": ".hentry, .no-results", "type": "border-bottom-color", "label": "Bottom border color" },
 		/* Table */
-		{ "selector": ".entry-content th", "type": "text", "label": "Table Headings" },
-		{ "selector": ".entry-content th", "type": "color", "label": "Table Headings color" },
-		{ "selector": ".entry-content td, .entry-content td p", "type": "text", "label": "Table Content" },
-		{ "selector": ".entry-content td, .entry-content td p", "type": "color", "label": "Table Content color" },
-		{ "selector": ".entry-content td", "type": "border-top-color", "label": "Table Content top border color" },
-		{ "selector": ".entry-content table", "type": "border-bottom-color", "label": "Table bottom border color" },
-		/* Image */
+		{ "selector": ".entry-content th", "type": "text", "label": "Table heading" },
+		{ "selector": ".entry-content th", "type": "color", "label": "Table heading color" },
+		{ "selector": ".entry-content th", "type": "background-color", "label": "Table heading background color" },
+		{ "selector": ".entry-content td, .entry-content td p", "type": "text", "label": "Table content" },
+		{ "selector": ".entry-content td, .entry-content td p", "type": "color", "label": "Table content color" },
+		{ "selector": ".entry-content td", "type": "background-color", "label": "Table content background color" },
+		/* Table Row Border Color -- Specific to the this theme */
+		{ "selector": ".entry-content td, .entry-content table", "type": "border-color", "label": "Table row border color" },
+		{}
+	],
+	/* Not quite ready yet -- conflicts between image border and caption background / caption image hover */
+	/*"Entry Images": [
 		{ "selector": "img[class*='align'], img[class*='wp-image - '], #content .gallery .gallery-icon img, .wp-caption img", "type": "border-color", "label": "Image border color" },  { "selector": ".entry-content .wp-caption-text", "type": "text", "label": "Caption" },
 		{ "selector": ".entry-content .wp-caption-text", "type": "color", "label": "Caption color" },
 		{ "selector": ".wp-caption", "type": "background-color", "label": "Caption background" },
-		/* Post Navigation */
-		{ "selector": "#content nav a", "type": "text", "label": "Post Navigation Link" },
-		{ "selector": "#content nav a", "type": "color", "label": "Post Navigation Link color" },
-		{ "selector": "#content nav a:hover", "type": "color", "label": "Post Navigation hover color" },
-		/* Page Navigation */
-		{ "selector": ".page-link, .page-link a", "type": "text", "label": "Page Navigation Link" },
-		{ "selector": ".page-link", "type": "color", "label": "Page Navigation color" },
-		{ "selector": ".page-link a", "type": "color", "label": "Page Navigation Link color" },
-		{ "selector": ".page-link a", "type": "background-color", "label": "Page Navigation Link backbground color" },
-		{ "selector": ".page-link a:hover", "type": "color", "label": "Page Navigation hover color" },
-		{ "selector": ".page-link a:hover", "type": "background-color", "label": "Page Navigation Link backbground hover color" },
+	],*/
+	"Entry Navigation": [
+		/* Previous/Next */
+		{ "selector": "#content nav a", "type": "text", "label": "Previous/Next link" },
+		{ "selector": "#content nav a", "type": "color", "label": "Previous/Next link color" },
+		{ "selector": "#content nav a:hover", "type": "color", "label": "Previous/Next link hover color" },
+		/* Paging */
+		{ "selector": ".page-link, .page-link a", "type": "text", "label": "Paging" },
+		{ "selector": ".page-link", "type": "color", "label": "Paging label color" },
+		{ "selector": ".page-link a", "type": "color", "label": "Paging link color" },
+		{ "selector": ".page-link a:hover", "type": "color", "label": "Paging link hover color" },
+		{ "selector": ".page-link a", "type": "background-color", "label": "Paging link background color" },
+		{ "selector": ".page-link a:hover", "type": "background-color", "label": "Page Navigation Link background hover color" },
 		{}
 	],
 	"Entry Meta": [
-		{ "selector": ".entry-meta", "type": "text", "label": "Entry meta" },
-		{ "selector": ".entry-meta", "type": "color", "label": "Entry meta color" },
-		{ "selector": ".entry-meta a", "type": "color", "label": "Entry link color" },
-		{ "selector": ".entry-meta a:hover", "type": "color", "label": "Entry link hover color" },
+		/* Meta */
+		{ "selector": ".entry-meta", "type": "text", "label": "Meta" },
+		{ "selector": ".entry-meta", "type": "color", "label": "Meta color" },
+		{ "selector": ".entry-meta a", "type": "color", "label": "Meta link color" },
+		{ "selector": ".entry-meta a:hover", "type": "color", "label": "Meta link hover color" },
+		/* Edit link */
 		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "text", "label": "Edit link" },
-		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "color", "label": "Edit link" },
-		{ "selector": ".edit-link a:hover, #comments .comment-meta .edit-link a:hover", "type": "color", "label": "Edit link hover" },
-		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "background-color", "label": "Edit link background" },
-		{ "selector": ".edit-link a:hover, #comments .comment-meta .edit-link a:hover", "type": "background-color", "label": "Edit link background hover" },
+		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "color", "label": "Edit link color" },
+		{ "selector": ".edit-link a:hover, #comments .comment-meta .edit-link a:hover", "type": "color", "label": "Edit link hover color" },
+		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "background-color", "label": "Edit link background color" },
+		{ "selector": ".edit-link a:hover, #comments .comment-meta .edit-link a:hover", "type": "background-color", "label": "Edit link hover background color" },
+		/* Bottom Border */
+		{ "selector": ".hentry, .no-results", "type": "border-bottom-color", "label": "Bottom border color" },
 		{}
 	],
 	"Comment": [

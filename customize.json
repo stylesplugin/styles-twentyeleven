@@ -126,18 +126,18 @@
 		{ "selector": ".entry-content p, .entry-summary p, #respond p", "type": "text", "label": "Paragraph" },
 		{ "selector": ".entry-content p, .entry-summary p, #respond p", "type": "color", "label": "Paragraph color" },
 		/* Links set for content and comments. Comment selection should override */
-		{ "selector": ".entry-content a, #commentform a", "type": "color", "label": "Link color" },
-		{ "selector": ".entry-content a:hover, #commentform a:hover", "type": "color", "label": "Link hover color" },
+		{ "selector": ".entry-content a, #comments a", "type": "color", "label": "Link color" },
+		{ "selector": ".entry-content a:hover, #comments a:hover", "type": "color", "label": "Link hover color" },
 		/* Lists */
 		{ "selector": ".entry-content li, .entry-content li p", "type": "text", "label": "List Items" },
 		{ "selector": ".entry-content li, .entry-content li p", "type": "color", "label": "List Items color" },
 		/* Small */
 		{ "selector": ".entry-content small", "type": "text", "label": "Small" },
 		{ "selector": ".entry-content small", "type": "color", "label": "Small color" },
-		/* Preformatted */
-		{ "selector": ".entry-content pre", "type": "text", "label": "Preformatted" },
-		{ "selector": ".entry-content pre", "type": "color", "label": "Preformatted color" },
-		{ "selector": ".entry-content pre", "type": "background-color", "label": "Preformatted background color" },
+		/* Preformatted & Code - Set for content and comments. Comments section might override */
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "text", "label": "Preformatted & code" },
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "color", "label": "Preformatted & code color" },
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "background-color", "label": "Preformatted & code background color" },
 		/* Blockquote */
 		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "text", "label": "Blockquote" },
 		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "color", "label": "Blockquote color" },
@@ -192,15 +192,34 @@
 		{}
 	],
 	"Comment": [
-		/* Template used to remove speech bubble PNG and replace with CSS Triangle. Note use of sprintf arguement swapping: http://go.brain.st/16TeLbh */
-		{ "selector": "#comments li.comment", "type": "background-color", "label": "Background color", "template": "$selector { background-color: $value; } $selector:before { content: ''; position:absolute; width: 0px; height: 0px; border-left: 28px solid transparent; border-right: 0px solid transparent; border-top: 27px solid $value; }" },
-		{ "selector": "#comments .comment .comment-content", "type": "text", "label": "Content" },
-		{ "selector": "#comments .comment .comment-content, .comment-content h1, .comment-content h2, .comment-content blockquote cite, .comment-content th", "type": "color", "label": "Content color" },
-		{ "selector": "#comments .comment .comment-content a", "type": "color", "label": "Link color" },
-		{ "selector": "#comments .comment .comment-content a:hover", "type": "color", "label": "Link hover color" },
-		{ "selector": ".comment-content pre", "type": "text", "label": "Preformatted" },
-		{ "selector": ".comment-content pre", "type": "color", "label": "Preformatted color" },
-		{ "selector": ".comment-content pre", "type": "background-color", "label": "Preformatted background color" },
+		/* Template used to remove speech bubble PNG and replace with CSS Triangle. */
+		{ "selector": "#comments .comment", "type": "background-color", "label": "Background color", "template": "$selector { background-color: $value; } $selector:before { content: ''; position:absolute; width: 0px; height: 0px; border-left: 28px solid transparent; border-right: 0px solid transparent; border-top: 27px solid $value; }" },
+		/* Comment content - This may need to change to effect comment meta as well */
+		{ "selector": ".comment-content, .comment-content p", "type": "text", "label": "Content" },
+		{ "selector": ".comment-content, .comment-content p, .comment-content h1, .comment-content h2, .comment-content h3, .comment-content h4, .comment-content h5, .comment-content h6, .comment-content blockquote cite, .comment-content th, .comment-content dt", "type": "color", "label": "Content color" },
+		/* Comment link - Also set in Entry Content */
+		/* Comment link - Effects comment content and meta links. Following sections should override */
+		{ "selector": "#comments a", "type": "color", "label": "Link color" },
+		{ "selector": "#comments a:hover", "type": "color", "label": "Link hover color" },
+		/* Preformatted & Code - Also set in Entry Content  */
+		/*{ "selector": ".comment-content pre, .comment-content code", "type": "text", "label": "Preformatted & code" },*/
+		/*{ "selector": ".comment-content pre, .comment-content code", "type": "color", "label": "Preformatted & code color" },*/
+		/*{ "selector": ".comment-content pre, .comment-content code", "type": "background-color", "label": "Preformatted & code background color" },*/
+		{}
+	],
+	"Comment (Even)": [
+		/* Template used to remove speech bubble PNG and replace with CSS Triangle. */
+		{ "selector": "#comments .even", "type": "background-color", "label": "Background color", "template": "$selector { background-color: $value; } $selector:before { content: ''; position:absolute; width: 0px; height: 0px; border-left: 28px solid transparent; border-right: 0px solid transparent; border-top: 27px solid $value; }" },
+		/* Comment content - This may need to change to effect comment meta as well */
+		{ "selector": ".even .comment-content, .even .comment-content p", "type": "text", "label": "Content" },
+		{ "selector": ".even .comment-content, .even .comment-content p, .even .comment-content h1, .even .comment-content h2, .even .comment-content h3, .even .comment-content h4, .even .comment-content h5, .even .comment-content h6, .even .comment-content blockquote cite, .even .comment-content th, .even .comment-content dt", "type": "color", "label": "Content color" },
+		/* Comment link - Also set in Entry Content */
+		/* Comment link - Effects comment content and meta links. Following sections should override */
+		{ "selector": "#comments .even a", "type": "color", "label": "Link color" },
+		{ "selector": "#comments .even a:hover", "type": "color", "label": "Link hover color" },
+		{}
+	],
+	"Comment Author": [
 		{ "selector": "#comments .pingback", "type": "text", "label": "Pingback" },
 		{ "selector": "#comments .pingback", "type": "color", "label": "Pingback color" },
 		{ "selector": "#comments .pingback a", "type": "color", "label": "Pingback Link color" },

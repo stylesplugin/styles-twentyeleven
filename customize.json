@@ -181,12 +181,12 @@
 		{ "selector": ".entry-meta", "type": "color", "label": "Meta color" },
 		{ "selector": ".entry-meta a", "type": "color", "label": "Meta link color" },
 		{ "selector": ".entry-meta a:hover", "type": "color", "label": "Meta link hover color" },
-		/* Edit link */
-		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "text", "label": "Edit link" },
-		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "color", "label": "Edit link color" },
-		{ "selector": ".edit-link a:hover, #comments .comment-meta .edit-link a:hover", "type": "color", "label": "Edit link hover color" },
-		{ "selector": ".edit-link a, #comments .comment-meta .edit-link a", "type": "background-color", "label": "Edit link background color" },
-		{ "selector": ".edit-link a:hover, #comments .comment-meta .edit-link a:hover", "type": "background-color", "label": "Edit link hover background color" },
+		/* Edit link - Effects Entry, Comment, Showcase */
+		{ "selector": ".edit-link a", "type": "text", "label": "Edit link" },
+		{ "selector": ".edit-link a", "type": "color", "label": "Edit link color" },
+		{ "selector": ".edit-link a:hover", "type": "color", "label": "Edit link hover color" },
+		{ "selector": ".edit-link a", "type": "background-color", "label": "Edit link background color" },
+		{ "selector": ".edit-link a:hover", "type": "background-color", "label": "Edit link hover background color" },
 		/* Bottom Border */
 		{ "selector": ".hentry, .no-results", "type": "border-bottom-color", "label": "Bottom border color" },
 		{}
@@ -263,24 +263,17 @@
 		{}
 	],
 	"Template – Showcase": [
-		{ "selector": ".showcase", "type": "text", "label": "Text" },
-		{ "selector": ".showcase", "type": "color", "label": "Color" },
-		{ "selector": "article.intro", "type": "background-color", "label": "Intro Background color" },
-		{ "selector": "article.intro .entry-content p", "type": "text", "label": "Intro Paragraph" },
-		{ "selector": "article.intro .entry-content p", "type": "color", "label": "Intro Paragraph color" },
-		{ "selector": "article.intro .edit-link a", "type": "text", "label": "Edit link" },
-		{ "selector": "article.intro .edit-link a", "type": "color", "label": "Edit link" },
-		{ "selector": "article.intro .edit-link a:hover", "type": "color", "label": "Edit link hover" },
-		{ "selector": "article.intro .edit-link a", "type": "background-color", "label": "Edit link background" },
-		{ "selector": "article.intro .edit-link a:hover", "type": "background-color", "label": "Edit link background hover" },
-		{ "selector": ".featured-posts .showcase-heading", "type": "text", "label": "Featured Post Title" },
-		{ "selector": ".featured-posts .showcase-heading", "type": "color", "label": "Featured Post Title Color" },
-		{ "selector": ".featured-posts", "type": "border-bottom-color", "label": "Featured Post bottom border color" },
-		{ "selector": ".showcase-heading", "type": "text", "label": "Recent Posts Title" },
-		{ "selector": ".showcase-heading", "type": "color", "label": "Recent Posts Title Color" },
-		{ "selector": "section.recent-posts .other-recent-posts, section.recent-posts .other-recent-posts .entry-title, section.recent-posts .other-recent-posts .comments-link a, section.recent-posts .other-recent-posts .comments-link > span", "type": "border-color", "label": "Other Recent Posts border color" },  { "selector": "section.recent-posts .other-recent-posts .entry-title a", "type": "text", "label": "Other Recent Posts Title" },
-		{ "selector": "section.recent-posts .other-recent-posts .entry-title a", "type": "color", "label": "Other Recent Posts Title Color" },
-		{ "selector": "section.recent-posts .other-recent-posts .entry-title a:hover", "type": "color", "label": "Other Recent Posts Title Hover Color" },
+		/* Section Title */
+		{ "selector": ".showcase-heading", "type": "text", "label": "Section title" },
+		{ "selector": ".showcase-heading", "type": "color", "label": "Section title color" },
+		/* Post Titles */
+		{ "selector": ".showcase .feature-text .entry-title a, .showcase .recent-posts .entry-title a", "type": "color", "label": "Post title color" },
+		{ "selector": ".showcase .feature-text .entry-title a:hover, .showcase .recent-posts .entry-title a:hover", "type": "color", "label": "Post title hover color" },
+		/* Recent Post Title */
+		{ "selector": ".showcase .other-recent-posts, .showcase .other-recent-posts .entry-title, .showcase .other-recent-posts .comments-link a, .showcase .other-recent-posts .comments-link > span", "type": "border-color", "label": "Recent posts – border color" },  { "selector": ".showcase .other-recent-posts .entry-title a", "type": "text", "label": "Small title" },
+		/* Featured Post */
+		{ "selector": ".featured-posts", "type": "border-bottom-color", "label": "Featured border color" },
+		
 		{}
 	],
 	"Footer": [

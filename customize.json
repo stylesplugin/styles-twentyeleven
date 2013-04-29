@@ -1,11 +1,3 @@
-/*
-	selector: CSS selector of the element to be edited.
-			  All selectors are prepended with ".styles " to increase specificity.
-	type:     Type of user interface to display and CSS to output. Can be: color, background-color, text
-	label:    Name of this element to display in the user interface. First word only should be capitalized
-	template: (optional) Used to override CSS output. Allows use of $selector and $value
-	suffix:   (optional) Change or clear the additional text shown next to the label
-*/
 {
 	"Header": [
 		/* Background */

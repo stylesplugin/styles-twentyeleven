@@ -30,7 +30,7 @@
 		/* Background */
 		/* "template": removes background-image setting from parent theme. */
 		/* TODO: Consider 'css' or 'additional' setting. Set with jQuery.attr( 'style' ) */
-		{ "selector": "#access", "type": "background-color", "label": "Background", "template": "$selector { background-color: $value; background-image: none; }" },
+		{ "selector": "#access", "type": "background-color", "label": "Area", "template": "$selector { background-color: $value; background-image: none; }" },
 		/* Top items */
 		{ "selector": "#access ul", "type": "text", "label": "Top item" },
 		{ "selector": "#access ul > li > a", "type": "color", "label": "Top item" },
@@ -47,7 +47,6 @@
 		{ "selector": "#access ul ul a", "type": "border-bottom-color", "label": "Submenu item" },
 		{}
 	],
-	/* Create multiple sidebar sections if appropriate for the theme */
 	"Widgets – Sidebar": [
 		/* Widget Title */
 		{ "selector": "#secondary .widget-title", "type": "text", "label": "Title" },
@@ -122,30 +121,31 @@
 		{ "selector": ".entry-content a, #comments a", "type": "color", "label": "Link" },
 		{ "selector": ".entry-content a:hover, #comments a:hover", "type": "color", "label": "Link" },
 		/* Lists */
-		{ "selector": ".entry-content li, .entry-content li p", "type": "text", "label": "List Items" },
-		{ "selector": ".entry-content li, .entry-content li p", "type": "color", "label": "List Items" },
+		{ "selector": ".entry-content li, .entry-content li p", "type": "text", "label": "List" },
+		{ "selector": ".entry-content li, .entry-content li p", "type": "color", "label": "List" },
 		/* Small */
 		{ "selector": ".entry-content small", "type": "text", "label": "Small" },
 		{ "selector": ".entry-content small", "type": "color", "label": "Small" },
 		/* Preformatted & Code - Set for content and comments. Comments section might override */
-		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "text", "label": "Preformatted & code" },
-		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "color", "label": "Preformatted & code" },
-		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "background-color", "label": "Preformatted & code" },
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "text", "label": "Preformatted, code" },
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "color", "label": "Preformatted, code" },
+		{ "selector": ".entry-content pre, .comment-content pre, .entry-content code, .comment-content code", "type": "background-color", "label": "Preformatted, code" },
 		/* Blockquote */
 		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "text", "label": "Blockquote" },
 		{ "selector": ".entry-content blockquote, .entry-content blockquote p", "type": "color", "label": "Blockquote" },
 		/* Address */
 		{ "selector": ".entry-content address", "type": "text", "label": "Address" },
 		{ "selector": ".entry-content address", "type": "color", "label": "Address" },
-		/* Table */
-		{ "selector": ".entry-content th", "type": "text", "label": "Table heading" },
-		{ "selector": ".entry-content th", "type": "color", "label": "Table heading" },
-		{ "selector": ".entry-content th", "type": "background-color", "label": "Table heading" },
-		{ "selector": ".entry-content td, .entry-content td p", "type": "text", "label": "Table content" },
-		{ "selector": ".entry-content td, .entry-content td p", "type": "color", "label": "Table content" },
-		{ "selector": ".entry-content td", "type": "background-color", "label": "Table content" },
-		/* Table Row Border Color -- Specific to the this theme */
-		{ "selector": ".entry-content td, .entry-content table", "type": "border-color", "label": "Table row" },
+		/* Table Border    - #content applies to .entry-content and comments */
+		{ "selector": "#content table, #content td", "type": "border-color", "label": "Table" },
+		/* Table Heading */
+		{ "selector": "#content th", "type": "text", "label": "Table heading" },
+		{ "selector": "#content th", "type": "color", "label": "Table heading" },
+		{ "selector": "#content th", "type": "background-color", "label": "Table heading" },
+		/* Table Content */
+		{ "selector": "#content td, #content td p", "type": "text", "label": "Table content" },
+		{ "selector": "#content td, #content td p", "type": "color", "label": "Table content" },
+		{ "selector": "#content td", "type": "background-color", "label": "Table content" },
 		/* Bottom Border -- Specific to this theme */
 		{ "selector": ".hentry, .no-results", "type": "border-bottom-color", "label": "Entry" },
 		{}
@@ -195,9 +195,9 @@
 		{ "selector": "#comments a", "type": "color", "label": "Link" },
 		{ "selector": "#comments a:hover", "type": "color", "label": "Link" },
 		/* Preformatted & Code - Also set in Entry Content  */
-		/*{ "selector": ".comment-content pre, .comment-content code", "type": "text", "label": "Preformatted & code" },*/
-		/*{ "selector": ".comment-content pre, .comment-content code", "type": "color", "label": "Preformatted & code" },*/
-		/*{ "selector": ".comment-content pre, .comment-content code", "type": "background-color", "label": "Preformatted & code" },*/
+		/*{ "selector": ".comment-content pre, .comment-content code", "type": "text", "label": "Preformatted, code" },*/
+		/*{ "selector": ".comment-content pre, .comment-content code", "type": "color", "label": "Preformatted, code" },*/
+		/*{ "selector": ".comment-content pre, .comment-content code", "type": "background-color", "label": "Preformatted, code" },*/
 		{}
 	],
 	"Comments – Content (Even)": [
@@ -241,6 +241,7 @@
 	"Comments – Pingback": [
 		/* Pingbacks */
 		{ "selector": "#comments .pingback", "type": "text", "label": "Pingback" },
+		{ "selector": "#comments .pingback", "type": "background-color", "label": "Pingback" },
 		{ "selector": "#comments .pingback", "type": "color", "label": "Pingback" },
 		{ "selector": "#comments .pingback a", "type": "color", "label": "Pingback link" },
 		{ "selector": "#comments .pingback a:hover", "type": "color", "label": "Pingback link" },
@@ -263,11 +264,11 @@
 		{ "selector": "#respond label", "type": "color", "label": "Label" },
 		{ "selector": "#respond label", "type": "background-color", "label": "Label" },
 		/* Response field (textarea) */
-		{ "selector": "#respond textarea, #respond input[type='text']", "type": "text", "label": "Response field" },
-		{ "selector": "#respond textarea, #respond input[type='text']", "type": "color", "label": "Response field" },
-		{ "selector": "#respond textarea, #respond input[type='text']", "type": "background-color", "label": "Response field" },
-		{ "selector": "#respond textarea:focus, #respond input[type='text']:focus", "type": "background-color", "label": "Response field" },
-		{ "selector": "#respond textarea, #respond input[type='text']", "type": "border-color", "label": "Response field" },
+		{ "selector": "#respond textarea, #respond input[type='text']", "type": "text", "label": "Textarea" },
+		{ "selector": "#respond textarea, #respond input[type='text']", "type": "color", "label": "Textarea" },
+		{ "selector": "#respond textarea, #respond input[type='text']", "type": "background-color", "label": "Textarea" },
+		{ "selector": "#respond textarea:focus, #respond input[type='text']:focus", "type": "background-color", "label": "Textarea" },
+		{ "selector": "#respond textarea, #respond input[type='text']", "type": "border-color", "label": "Textarea" },
 		/* Submit button */
 		{ "selector": "#respond input#submit", "type": "text", "label": "Submit button" },
 		{ "selector": "#respond input#submit", "type": "color", "label": "Submit button" },

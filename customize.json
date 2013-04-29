@@ -33,7 +33,7 @@
 		/* -- none -- */
 		{}
 	],
-	"Menu: Primary": [
+	"Menu – Primary": [
 		/* Background */
 		/* "template": removes background-image setting from parent theme. */
 		/* TODO: Consider 'css' or 'additional' setting. Set with jQuery.attr( 'style' ) */
@@ -55,46 +55,46 @@
 		{}
 	],
 	/* Create multiple sidebar sections if appropriate for the theme */
-	"Sidebar: Main": [
+	"Widgets – Sidebar": [
 		/* Widget Title */
-		{ "selector": "#secondary .widget-title", "type": "text", "label": "Widget title" },
-		{ "selector": "#secondary .widget-title", "type": "color", "label": "Widget title color" },
+		{ "selector": "#secondary .widget-title", "type": "text", "label": "Title" },
+		{ "selector": "#secondary .widget-title", "type": "color", "label": "Title color" },
 		/* Widget Content */
-		{ "selector": "#secondary aside, #secondary aside ul li", "type": "text", "label": "Widget content" },
-		{ "selector": "#secondary aside, #secondary aside ul li", "type": "color", "label": "Widget content color" },
+		{ "selector": "#secondary aside, #secondary aside ul li", "type": "text", "label": "Content" },
+		{ "selector": "#secondary aside, #secondary aside ul li", "type": "color", "label": "Content color" },
 		/* Widget Link */
-		{ "selector": "#secondary aside a", "type": "color", "label": "Widget link color" },
-		{ "selector": "#secondary aside a:hover", "type": "color", "label": "Widget link hover color" },
+		{ "selector": "#secondary aside a", "type": "color", "label": "Link color" },
+		{ "selector": "#secondary aside a:hover", "type": "color", "label": "Link hover color" },
 		{}  
 	], 
-	"Sidebar: Footer Areas": [
+	"Widgets – Footer": [
 		/* Background */
-		{ "selector": "#supplementary", "type": "background-color", "label": "Sidebar background color" },
-		{ "selector": "#supplementary", "type": "border-top-color", "label": "Sidebar top border color" },
+		{ "selector": "#supplementary", "type": "background-color", "label": "Area background color" },
+		{ "selector": "#supplementary", "type": "border-top-color", "label": "Area top border color" },
 		/* Widget Title */
-		{ "selector": "#supplementary .widget-title", "type": "text", "label": "Widget title" },
-		{ "selector": "#supplementary .widget-title", "type": "color", "label": "Widget title color" },
+		{ "selector": "#supplementary .widget-title", "type": "text", "label": "Title" },
+		{ "selector": "#supplementary .widget-title", "type": "color", "label": "Title color" },
 		/* Widget Content */
-		{ "selector": "#supplementary aside, #supplementary aside ul li", "type": "text", "label": "Widget content" },
-		{ "selector": "#supplementary aside, #supplementary aside ul li", "type": "color", "label": "Widget content color" },
+		{ "selector": "#supplementary aside, #supplementary aside ul li", "type": "text", "label": "Content" },
+		{ "selector": "#supplementary aside, #supplementary aside ul li", "type": "color", "label": "Content color" },
 		/* Widget Link */
-		{ "selector": "#supplementary aside a", "type": "color", "label": "Widget link color" },
-		{ "selector": "#supplementary aside a:hover", "type": "color", "label": "Widget link hover color" },
+		{ "selector": "#supplementary aside a", "type": "color", "label": "Link color" },
+		{ "selector": "#supplementary aside a:hover", "type": "color", "label": "Link hover color" },
 		{}
 	],
-	"Sidebar: Showcase": [
+	"Widgets – Showcase": [
 		/* Widget Title */
-		{ "selector": ".showcase .widget-area .widget-title", "type": "text", "label": "Widget title" },
-		{ "selector": ".showcase .widget-area .widget-title", "type": "color", "label": "Widget title color" },
+		{ "selector": ".showcase .widget-area .widget-title", "type": "text", "label": "Title" },
+		{ "selector": ".showcase .widget-area .widget-title", "type": "color", "label": "Title color" },
 		/* Widget Content */
-		{ "selector": ".showcase .widget-area aside, .showcase .widget-area aside ul li", "type": "text", "label": "Widget content" },
-		{ "selector": ".showcase .widget-area aside, .showcase .widget-area aside ul li", "type": "color", "label": "Widget content color" },
+		{ "selector": ".showcase .widget-area aside, .showcase .widget-area aside ul li", "type": "text", "label": "Content" },
+		{ "selector": ".showcase .widget-area aside, .showcase .widget-area aside ul li", "type": "color", "label": "Content color" },
 		/* Widget Link */
-		{ "selector": ".showcase .widget-area aside a", "type": "color", "label": "Widget link color" },
-		{ "selector": ".showcase .widget-area aside a:hover", "type": "color", "label": "Widget link hover color" },
+		{ "selector": ".showcase .widget-area aside a", "type": "color", "label": "Link color" },
+		{ "selector": ".showcase .widget-area aside a:hover", "type": "color", "label": "Link hover color" },
 		{}
 	],
-	"Entry Headings": [
+	"Entry – Headings": [
 		/* Title */
 		{ "selector": ".entry-title, .entry-title a", "type": "text", "label": "Title" },
 		{ "selector": ".entry-title, .entry-title a", "type": "color", "label": "Title color" },
@@ -121,7 +121,7 @@
 		{ "selector": ".page-title a:hover", "type": "color", "label": "Archive link hover color" },
 		{}
 	],
-	"Entry Content": [
+	"Entry – Content": [
 		/* Paragraph */
 		{ "selector": ".entry-content p, .entry-summary p, #respond p", "type": "text", "label": "Paragraph" },
 		{ "selector": ".entry-content p, .entry-summary p, #respond p", "type": "color", "label": "Paragraph color" },
@@ -161,7 +161,7 @@
 		{ "selector": ".entry-content .wp-caption-text", "type": "color", "label": "Caption color" },
 		{ "selector": ".wp-caption", "type": "background-color", "label": "Caption background" },
 	],*/
-	"Entry Navigation": [
+	"Entry – Navigation": [
 		/* Previous/Next */
 		{ "selector": "#content nav a", "type": "text", "label": "Previous/Next link" },
 		{ "selector": "#content nav a", "type": "color", "label": "Previous/Next link color" },
@@ -175,7 +175,7 @@
 		{ "selector": ".page-link a:hover", "type": "background-color", "label": "Page Navigation Link background hover color" },
 		{}
 	],
-	"Entry Meta": [
+	"Entry – Meta": [
 		/* Meta */
 		{ "selector": ".entry-meta", "type": "text", "label": "Meta" },
 		{ "selector": ".entry-meta", "type": "color", "label": "Meta color" },
@@ -191,7 +191,7 @@
 		{ "selector": ".hentry, .no-results", "type": "border-bottom-color", "label": "Bottom border color" },
 		{}
 	],
-	"Comment": [
+	"Comments – Content": [
 		/* Template used to remove speech bubble PNG and replace with CSS Triangle. */
 		{ "selector": "#comments .comment", "type": "background-color", "label": "Background color", "template": "$selector { background-color: $value; } $selector:before { content: ''; position:absolute; width: 0px; height: 0px; border-left: 28px solid transparent; border-right: 0px solid transparent; border-top: 27px solid $value; }" },
 		/* Comment content - This may need to change to effect comment meta as well */
@@ -207,7 +207,7 @@
 		/*{ "selector": ".comment-content pre, .comment-content code", "type": "background-color", "label": "Preformatted & code background color" },*/
 		{}
 	],
-	"Comment (Even)": [
+	"Comments – Content (Even)": [
 		/* Template used to remove speech bubble PNG and replace with CSS Triangle. */
 		{ "selector": "#comments .even", "type": "background-color", "label": "Background color", "template": "$selector { background-color: $value; } $selector:before { content: ''; position:absolute; width: 0px; height: 0px; border-left: 28px solid transparent; border-right: 0px solid transparent; border-top: 27px solid $value; }" },
 		/* Comment content - This may need to change to effect comment meta as well */
@@ -219,14 +219,14 @@
 		{ "selector": "#comments .even a:hover", "type": "color", "label": "Link hover color" },
 		{}
 	],
-	"Comment Author": [
+	"Comments – Author": [
 		{ "selector": "#comments .pingback", "type": "text", "label": "Pingback" },
 		{ "selector": "#comments .pingback", "type": "color", "label": "Pingback color" },
 		{ "selector": "#comments .pingback a", "type": "color", "label": "Pingback Link color" },
 		{ "selector": "#comments .pingback a:hover", "type": "color", "label": "Pingback Link hover color" },
 		{}
 	],
-	"Comment Meta": [
+	"Comments – Meta": [
 		{ "selector": "#comments-title", "type": "text", "label": "List Title" },
 		{ "selector": "#comments-title", "type": "color", "label": "List Title color" },
 		{ "selector": "#comments .comment-meta", "type": "text", "label": "Meta" },
@@ -240,7 +240,7 @@
 		{ "selector": "#comments a.comment-reply-link:hover", "type": "background-color", "label": "Reply link hover background color" },
 		{}
 	],
-	"Comment Response": [
+	"Comments – Response Form": [
 		{ "selector": "#respond", "type": "background-color", "label": "Background color" },
 		{ "selector": "#reply-title", "type": "text", "label": "Title" },
 		{ "selector": "#reply-title, #reply-title a", "type": "color", "label": "Title color" },
@@ -262,7 +262,7 @@
 		{ "selector": "#respond input#submit", "type": "background-color", "label": "Submit button background color" },
 		{}
 	],
-	"Showcase": [
+	"Template – Showcase": [
 		{ "selector": ".showcase", "type": "text", "label": "Text" },
 		{ "selector": ".showcase", "type": "color", "label": "Color" },
 		{ "selector": "article.intro", "type": "background-color", "label": "Intro Background color" },

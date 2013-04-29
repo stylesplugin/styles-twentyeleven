@@ -4,6 +4,7 @@
 	type:     Type of user interface to display and CSS to output. Can be: color, background-color, text
 	label:    Name of this element to display in the user interface. First word only should be capitalized
 	template: (optional) Used to override CSS output. Allows use of $selector and $value
+	suffix:   (optional) Change or clear the additional text shown next to the label
 */
 {
 	"Header": [
@@ -183,7 +184,7 @@
 		{ "selector": ".entry-meta", "type": "color", "label": "Meta" },
 		{ "selector": ".entry-meta a", "type": "color", "label": "Meta link" },
 		{ "selector": ".entry-meta a:hover", "type": "color", "label": "Meta link" },
-		/* Edit link - Effects Entry, Comment, Showcase */
+		/* Edit link    - Affects Entry, Comment, Showcase */
 		{ "selector": ".edit-link a", "type": "text", "label": "Edit link" },
 		{ "selector": ".edit-link a", "type": "color", "label": "Edit link" },
 		{ "selector": ".edit-link a:hover", "type": "color", "label": "Edit link" },
@@ -194,11 +195,11 @@
 	"Comments – Content": [
 		/* Template used to remove speech bubble PNG and replace with CSS Triangle. */
 		{ "selector": "#comments .comment", "type": "background-color", "label": "Area", "template": "$selector { background-color: $value; } $selector:before { content: ''; position:absolute; width: 0px; height: 0px; border-left: 28px solid transparent; border-right: 0px solid transparent; border-top: 27px solid $value; }" },
-		/* Comment content - This may need to change to effect comment meta as well */
+		/* Comment content    - This may need to change to effect comment meta as well */
 		{ "selector": ".comment-content, .comment-content p", "type": "text", "label": "Content" },
 		{ "selector": ".comment-content, .comment-content p, .comment-content h1, .comment-content h2, .comment-content h3, .comment-content h4, .comment-content h5, .comment-content h6, .comment-content blockquote cite, .comment-content th, .comment-content dt", "type": "color", "label": "Content" },
-		/* Comment link - Also set in Entry Content */
-		/* Comment link - Effects comment content and meta links. Following sections should override */
+		/* Comment link    - Also set in Entry Content 
+		                   - Affects comment content and meta links. Following sections should override */
 		{ "selector": "#comments a", "type": "color", "label": "Link" },
 		{ "selector": "#comments a:hover", "type": "color", "label": "Link" },
 		/* Preformatted & Code - Also set in Entry Content  */
@@ -210,16 +211,17 @@
 	"Comments – Content (Even)": [
 		/* Template used to remove speech bubble PNG and replace with CSS Triangle. */
 		{ "selector": "#comments .even", "type": "background-color", "label": "Area", "template": "$selector { background-color: $value; } $selector:before { content: ''; position:absolute; width: 0px; height: 0px; border-left: 28px solid transparent; border-right: 0px solid transparent; border-top: 27px solid $value; }" },
-		/* Comment content - This may need to change to effect comment meta as well */
+		/* Comment content    - This may need to change to effect comment meta as well */
 		{ "selector": ".even .comment-content, .even .comment-content p", "type": "text", "label": "Content" },
 		{ "selector": ".even .comment-content, .even .comment-content p, .even .comment-content h1, .even .comment-content h2, .even .comment-content h3, .even .comment-content h4, .even .comment-content h5, .even .comment-content h6, .even .comment-content blockquote cite, .even .comment-content th, .even .comment-content dt", "type": "color", "label": "Content" },
-		/* Comment link - Also set in Entry Content */
-		/* Comment link - Effects comment content and meta links. Following sections should override */
+		/* Comment link    - Also set in Entry Content
+		                   - Affects comment content and meta links. Following sections should override */
 		{ "selector": "#comments .even a", "type": "color", "label": "Link" },
 		{ "selector": "#comments .even a:hover", "type": "color", "label": "Link" },
 		{}
 	],
 	"Comments – Author": [
+		/* Author */
 		{ "selector": "#comments .comment-author", "type": "text", "label": "Author" },
 		{ "selector": "#comments .comment-author", "type": "color", "label": "Author" },
 		{ "selector": "#comments .comment-author .fn", "type": "color", "label": "Author name" },
@@ -228,12 +230,15 @@
 		{}
 	],
 	"Comments – Meta": [
+		/* List title */
 		{ "selector": "#comments-title", "type": "text", "label": "List title" },
 		{ "selector": "#comments-title", "type": "color", "label": "List title" },
+		/* Meta */
 		{ "selector": "#comments .comment-meta", "type": "text", "label": "Meta" },
 		{ "selector": "#comments .comment-meta", "type": "color", "label": "Meta" },
 		{ "selector": "#comments .comment-meta a", "type": "color", "label": "Meta link" },
 		{ "selector": "#comments .comment-meta a:hover", "type": "color", "label": "Meta link" },
+		/* Reply link */
 		{ "selector": "#comments a.comment-reply-link", "type": "text", "label": "Reply link" },
 		{ "selector": "#comments a.comment-reply-link", "type": "color", "label": "Reply link" },
 		{ "selector": "#comments a.comment-reply-link:hover", "type": "color", "label": "Reply link" },
@@ -242,6 +247,7 @@
 		{}
 	],
 	"Comments – Pingback": [
+		/* Pingbacks */
 		{ "selector": "#comments .pingback", "type": "text", "label": "Pingback" },
 		{ "selector": "#comments .pingback", "type": "color", "label": "Pingback" },
 		{ "selector": "#comments .pingback a", "type": "color", "label": "Pingback link" },
@@ -249,22 +255,28 @@
 		{}
 	],
 	"Comments – Response Form": [
+		/* Area */
 		{ "selector": "#respond", "type": "background-color", "label": "Area" },
+		/* Title */
 		{ "selector": "#reply-title", "type": "text", "label": "Title" },
 		{ "selector": "#reply-title, #reply-title a", "type": "color", "label": "Title" },
+		/* Description */
 		{ "selector": "#respond p", "type": "text", "label": "Description" },
 		{ "selector": "#respond p", "type": "color", "label": "Description" },
 		{ "selector": "#commentform a", "type": "text", "label": "Description link" },
 		{ "selector": "#commentform a", "type": "color", "label": "Description link" },
 		{ "selector": "#commentform a:hover", "type": "color", "label": "Description link" },
+		/* Label */
 		{ "selector": "#respond label", "type": "text", "label": "Label" },
 		{ "selector": "#respond label", "type": "color", "label": "Label" },
 		{ "selector": "#respond label", "type": "background-color", "label": "Label" },
+		/* Response field (textarea) */
 		{ "selector": "#respond textarea, #respond input[type='text']", "type": "text", "label": "Response field" },
 		{ "selector": "#respond textarea, #respond input[type='text']", "type": "color", "label": "Response field" },
 		{ "selector": "#respond textarea, #respond input[type='text']", "type": "background-color", "label": "Response field" },
 		{ "selector": "#respond textarea:focus, #respond input[type='text']:focus", "type": "background-color", "label": "Response field" },
 		{ "selector": "#respond textarea, #respond input[type='text']", "type": "border-color", "label": "Response field" },
+		/* Submit button */
 		{ "selector": "#respond input#submit", "type": "text", "label": "Submit button" },
 		{ "selector": "#respond input#submit", "type": "color", "label": "Submit button" },
 		{ "selector": "#respond input#submit", "type": "background-color", "label": "Submit button" },
@@ -285,8 +297,10 @@
 		{}
 	],
 	"Footer": [
+		/* Area */
 		{ "selector": "#site-generator", "type": "background-color", "label": "Area" },
 		{ "selector": "#site-generator", "type": "border-top-color", "label": "Area" },
+		/* Credit */
 		{ "selector": "#site-generator", "type": "text", "label": "Credit" },
 		{ "selector": "#site-generator a", "type": "color", "label": "Credit link" },
 		{ "selector": "#site-generator a:hover", "type": "color", "label": "Credit link" },

@@ -276,6 +276,9 @@
 		{}
 	],
 	"Template – Showcase": [
+		/* Intro    - Shows if there's text in the Showcase Page */
+		{ "selector": ".showcase article.intro *", "type": "color", "label": "Intro" },
+		{ "selector": ".showcase article.intro", "type": "background-color", "label": "Intro" },
 		/* Featured Post */
 		{ "selector": ".featured-posts", "type": "border-bottom-color", "label": "Featured" },
 		/* Section Title */

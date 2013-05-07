@@ -1,4 +1,16 @@
 {
+	"Global": [
+		/* Global */
+		{ "selector": "html,body", "type": "background-color", "label": "Outer area" },
+		{ "selector": "#page", "type": "background-color", "label": "Inner area" },
+		{ "selector": "#page", "type": "text", "label": "Default" },
+		{ "selector": "#page", "type": "color", "label": "Default" },
+		/* Link */
+		{ "selector": "#page a", "type": "text", "label": "Default link" },
+		{ "selector": "#page a", "type": "color", "label": "Default link" },
+		{ "selector": "#page a:hover", "type": "color", "label": "Default link" },
+		{}
+	],
 	"Header": [
 		/* Background */
 		{ "selector": "#branding", "type": "background-color", "label": "Header" },

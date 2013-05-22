@@ -28,7 +28,7 @@
 	"Search Form": [
 		/* Input */
 		{ "selector": "#s", "type": "text", "label": "Form" },
-		{ "selector": "#s", "type": "color", "label": "Form" },
+		{ "selector": "#s", "type": "color", "label": "Form", "template": "$selector { color: $value; } $selector::-webkit-input-placeholder { color: $value; } $selector:-moz-placeholder { color: $value; } $selector::-moz-placeholder { color: $value; } $selector:-ms-input-placeholder { color: $value; }" },
 		{ "selector": "#s", "type": "background-color", "label": "Form" },
 		/* Focus */
 		{ "selector": "#s:focus, #branding #s:focus", "type": "background-color", "label": "Form", "important": true },

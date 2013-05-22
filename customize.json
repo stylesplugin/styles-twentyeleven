@@ -44,7 +44,7 @@
 		/* TODO: Consider 'css' or 'additional' setting. Set with jQuery.attr( 'style' ) */
 		{ "selector": "#access", "type": "background-color", "label": "Area", "template": "$selector { background-color: $value; background-image: none; }" },
 		/* Top items */
-		{ "selector": "#access ul", "type": "text", "label": "Top item" },
+		{ "selector": "#access ul, #access ul > li > a", "type": "text", "label": "Top item" },
 		{ "selector": "#access ul > li > a", "type": "color", "label": "Top item" },
 		{ "selector": "#access ul > li > a:hover, #access li:hover > a, #access ul > li > a:focus", "type": "color", "label": "Top item" },
 		{ "selector": "#access ul > li > a", "type": "background-color", "label": "Top item" },

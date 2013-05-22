@@ -64,7 +64,7 @@
 		{ "selector": "#secondary .widget-title", "type": "text", "label": "Title" },
 		{ "selector": "#secondary .widget-title", "type": "color", "label": "Title" },
 		/* Widget Content */
-		{ "selector": "#secondary aside, #secondary aside ul li", "type": "text", "label": "Content" },
+		{ "selector": "#secondary aside, #secondary aside ul li, #secondary aside a", "type": "text", "label": "Content" },
 		{ "selector": "#secondary aside, #secondary aside ul li", "type": "color", "label": "Content" },
 		/* Widget Link */
 		{ "selector": "#secondary aside a", "type": "color", "label": "Link" },

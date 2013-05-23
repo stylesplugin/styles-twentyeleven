@@ -5,9 +5,9 @@ Author URI: http://brainstormmedia.com
 Tags: css, stylesheet, styles, appearance, customize, customizer, colors, color picker, images, image upload, background, fonts, google fonts, user interface
 Requires at least: 3.4
 Tested up to: 3.5.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 
-Be creative with TwentyEleven colors and fonts. Styles changes everything.
+Be creative with colors and fonts. Styles changes everything.
 
 == Description ==
 
@@ -71,6 +71,12 @@ Maybe! We have additional themes available available at [StylesPlugin.com](http:
 No! Styles is very careful about only loading what is needed to get its job done. Once you're done editing, stylesheets are cached and loaded for your sites users as quickly as possible.
 
 == Changelog ==
+
+= 1.0.1 = 
+* Fix: Change sidebar link size with text size.
+* Fix: Change "Description" to "Tagline" to match WordPress naming convention.
+* Fix: Menu – Primary top item text selector.
+* Fix: Form color for search input placeholder.
 
 = 1.0 =
 * Initial public release.

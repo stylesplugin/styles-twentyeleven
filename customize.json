@@ -27,13 +27,13 @@
 	],
 	"Search Form": [
 		/* Input */
-		{ "selector": "#s", "type": "text", "label": "Form" },
-		{ "selector": "#s", "type": "color", "label": "Form", "template": "$selector { color: $value; } $selector::-webkit-input-placeholder { color: $value; } $selector:-moz-placeholder { color: $value; } $selector::-moz-placeholder { color: $value; } $selector:-ms-input-placeholder { color: $value; }" },
-		{ "selector": "#s", "type": "background-color", "label": "Form" },
+		{ "selector": "#s, #branding #s, #branding .only-search #s", "type": "text", "label": "Form" },
+		{ "selector": "#s, #branding #s, #branding .only-search #s", "type": "color", "label": "Form", "template": "$selector { color: $value; } $selector::-webkit-input-placeholder { color: $value; } $selector:-moz-placeholder { color: $value; } $selector::-moz-placeholder { color: $value; } $selector:-ms-input-placeholder { color: $value; }" },
+		{ "selector": "#s, #branding #s, #branding .only-search #s", "type": "background-color", "label": "Form" },
 		/* Focus */
-		{ "selector": "#s:focus, #branding #s:focus", "type": "background-color", "label": "Form", "important": true },
+		{ "selector": "#s:focus, #branding #s:focus, #branding .only-search #s:focus", "type": "background-color", "label": "Form", "important": true },
 		/* Border */
-		{ "selector": "#s", "type": "border-color", "label": "Search form" },
+		{ "selector": "#s, #branding #s, #branding .only-search #s", "type": "border-color", "label": "Search form" },
 		/* Submit /*
 		/* -- none -- */
 		{}

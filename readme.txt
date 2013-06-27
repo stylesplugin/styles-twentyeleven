@@ -15,6 +15,8 @@ This plugin adds suport for the TwentyEleven theme to the [Styles plugin](http:/
 
 [Try a demo in TwentyEleven](http://demo.stylesplugin.com/twentyeleven).
 
+http://youtu.be/CpKiZEqpcr8
+
 **About Styles**
 
 WordPress has lots of beautiful themes, but personalizing a design can be difficult and time-intensive. Styles changes that. Styles gives you creative control in one consistent interface – the WordPress theme customizer. Styles lets you make your site your own. :)
